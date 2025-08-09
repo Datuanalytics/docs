@@ -61,6 +61,9 @@ nav:
     - Deploy:
       - Container service: user-guide/deploy/deploy_as_container_service.md
     - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
+  - Examples:
+    - Overview: examples/README.md
+  - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
 
 exclude_docs: |
   node_modules
@@ -81,6 +84,13 @@ plugins:
             docstring_style: google
             show_root_heading: true
             show_source: true
+  - llmstxt:
+      sections:
+        User Guide:
+          - README.md
+          - user-guide/**/*.md
+        Examples:
+          - examples/**/*.md
 
 extra:
   social:
@@ -92,7 +102,7 @@ extra:
   server_pypi: https://pypi.org/project/datu-core/
   server_repo: https://github.com/Datuanalytics/datu-core/blob/main
   server_repo_home: https://github.com/Datuanalytics/datu-core
-  
+
 validation:
   nav:
     omitted_files: info
