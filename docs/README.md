@@ -1,17 +1,29 @@
 # Datu AI Analyst
 
-Install Datu
+[Datu Core]({{ server_repo_home }}) is a Data AI analyst server which is simple to use with your data sources.
+
+First, install the Datu Core server:
 
 ```sh
-pip install "git+https://github.com/Datuanalytics/datu-analytics.git@0.0.1#egg=datu[postgres,sqldb]"
+pip install "datu-core[postgres,sqldb]"
 ```
+
+Then follow next steps.
 
 ## Features
 
 - **Lightweight talk to data**: A simple application that can talk with your data.
 - **Production ready**: Deploy anywhere whether it is in on-premises or cloud.
-- **Anonymizied conversations**: Anonymized conversations with your data.
 - **Safety and security as a priority**: Protecting the data while interacting with llm.
+
+## Next Steps
+
+Ready to learn more? Check out these resources:
+
+- [Quickstart](user-guide/quickstart.md) - A more detailed introduction to Datu core
+- [Examples](examples/README.md) - Examples for connecting multiple datasources.
+
+[Learn how to contribute]({{ server_repo }}/CONTRIBUTING.md) or join our community discussions to shape the future of Strands Agents ❤️.
 
 ### Warning!
 

@@ -1,11 +1,29 @@
 # Datu AI Analyst
 
-Install Datu
+This quickstart guide shows you how to spin up your Datu server, add datasources and integrate mcp servers to your agent and emit debug logs.
+After completing this guide you can deploy to production and running at scale.
 
-```sh
-pip install "git+https://github.com/Datuanalytics/datu-analytics.git@0.0.1#egg=datu[postgres,sqldb]"
-python -m spacy download en_core_web_lg # for anonymizer to work
+## Install Datu from PyPI.
 
+First, ensure that you have Python 3.11+ installed.
+
+We'll create a virtual environment to install the Strands Agents SDK and its dependencies in to.
+
+```bash
+python -m venv .venv
+```
+
+And activate the virtual environment:
+
+* macOS / Linux: `source .venv/bin/activate`
+* Windows (CMD): `.venv\Scripts\activate.bat`
+* Windows (PowerShell): `.venv\Scripts\Activate.ps1`
+
+Next we'll install the `datu-core` server package:
+
+```bash
+pip install "datu-core[postgres]"
+```
 
 ### How to add datasources
 
@@ -37,94 +55,25 @@ my_sources:
       schema: bronze
 ```
 
-### Configurations to set
+## How to run datu?
 
-All the configurations that can be used listed below with their description, default values and possible values. set them using environment variables.
+After creating the datasources profiles.yml.
 
-#### Application run configurations
+**Environment variables**: Set `DATU_OPENAI_API_KEY`
 
-##### Host
-
-Host where your application will be running.
-
-```sh
-DATU_HOST=0.0.0.0
+```bash
+datu
 ```
 
-##### Port
+## Debug logs
 
-Port where your application listens to.
+To enable debug logs in Datu server .
 
-```sh
-DATU_PORT=8000
-```
+**Environment variables**: Set `DATU_LOGGING_LEVEL="DEBUG"`
 
-##### Openai key
+## Next Steps
 
-OpenAI llm key.
+Ready to learn more? Check out these resources:
 
-```sh
-DATU_OPENAI_API_KEY=
-```
-
-#### Schema configurations
-
-##### Schema refresh threshold days
-
-Refresh schema in x days.
-
-```sh
-DATU_SCHEMA_REFRESH_THRESHOLD_DAYS=2
-```
-
-###### Schema cache file
-
-Store schema cache to.
-
-```sh
-DATU_SCHEMA_CACHEC_FILE=schema_cache.json
-```
-
-###### Schema categorical detection
-
-Detect categorical columns.
-
-```sh
-DATU_SCHEMA_CATEGORICAL_DETECTION=true
-```
-
-###### Schema sample limit
-
-Schema sample limit to determine categorical values.
-
-```sh
-DATU_SAMPLE_LIMIT=1000
-```
-
-###### Schema categorical threshold
-
-Threshold for column values to be considered as categorical.
-
-```sh
-DATU_SCHEMA_CATEGORICAL_THRESHOLD=10
-```
-
-###### SchemaRAG Engine
-
-Extract relevant part of schema based on user query. Set to True to activate.
-
-```sh
-DATU_ENABLE_SCHEMA_RAG=False
-```
-
-#### Datasource related configuration
-
-##### DBT profiles
-
-Datasource profiles.yml.
-
-```sh
-DATU_DBT_PROFILES=
-```
-
-
+- [Examples](../examples/README.md) - Examples for connecting multiple datasources.
+- [More configurations](configurations.md) - Datu server configurations includes port, schema configurations etc.

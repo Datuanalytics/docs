@@ -24,11 +24,11 @@ RUN curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/so
 RUN apt-get update
 RUN env ACCEPT_EULA=Y apt-get install -y msodbcsql18
 WORKDIR /app
-RUN pip install "git+https://github.com/Datuanalytics/datu-analytics.git@0.0.1#egg=datu[postgres,sqldb]"
+RUN pip install "datu-core[postgres,sqldb]"
 ENTRYPOINT [] 
 CMD ["uvicorn", "datu.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 ```
 
 ## Infrastructure
 
-For running Datu application smoothly, make sure you are allocated about 1GB of CPU and 2GB of memory atleast. Do not forget to add scaling to your services. For configurable variables checkout the quickstart section.
+For running Datu application smoothly, make sure you are allocated about 1GB of CPU and 2GB of memory atleast.For configurable variables checkout the quickstart/configurations section.

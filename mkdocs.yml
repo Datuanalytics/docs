@@ -71,6 +71,9 @@ plugins:
   - search
   - privacy
   - macros
+  - mike:
+      alias_type: symlink
+      canonical_version: latest
   - mkdocstrings:
       handlers:
         python:
@@ -79,6 +82,17 @@ plugins:
             show_root_heading: true
             show_source: true
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+  version:
+    provider: mike
+  # Variables
+  docs_repo: https://github.com/Datuanalytics/docs/tree/main
+  server_pypi: https://pypi.org/project/datu-core/
+  server_repo: https://github.com/Datuanalytics/datu-core/blob/main
+  server_repo_home: https://github.com/Datuanalytics/datu-core
+  
 validation:
   nav:
     omitted_files: info
