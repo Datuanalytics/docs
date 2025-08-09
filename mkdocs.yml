@@ -61,6 +61,8 @@ nav:
     - Deploy:
       - Container service: user-guide/deploy/deploy_as_container_service.md
     - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
+  - Architecture:
+    - Overview: architecture/README.md
   - Examples:
     - Overview: examples/README.md
   - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
