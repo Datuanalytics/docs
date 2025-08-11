@@ -1,0 +1,117 @@
+site_name: Datu AI Analyst
+site_description: Datu AI Analyst is a Python SDK for building AI agents that can interact with data, perform analysis, and generate insights. It provides a framework for creating agents that can work with various data sources and tools, enabling developers to build intelligent applications that leverage AI capabilities.
+site_dir: site
+
+repo_url: https://github.com/Datuanalytics/datu-core
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: custom
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: custom
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - content.code.select
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.emoji
+  - tables
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      title: On this page
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - User Guide:
+    - Welcome: README.md
+    - Quickstart: user-guide/quickstart.md
+    - Deploy:
+      - Container service: user-guide/deploy/deploy_as_container_service.md
+    - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
+  - Architecture:
+    - Overview: architecture/README.md
+  - Examples:
+    - Overview: examples/README.md
+  - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
+
+exclude_docs: |
+  node_modules
+  .venv
+  _dependencies
+
+plugins:
+  - search
+  - privacy
+  - macros
+  - mike:
+      alias_type: symlink
+      canonical_version: latest
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_root_heading: true
+            show_source: true
+  - llmstxt:
+      sections:
+        User Guide:
+          - README.md
+          - user-guide/**/*.md
+        Examples:
+          - examples/**/*.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+  version:
+    provider: mike
+  # Variables
+  docs_repo: https://github.com/Datuanalytics/docs/tree/main
+  server_pypi: https://pypi.org/project/datu-core/
+  server_repo: https://github.com/Datuanalytics/datu-core/blob/main
+  server_repo_home: https://github.com/Datuanalytics/datu-core
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
