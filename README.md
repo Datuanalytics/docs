@@ -1,7 +1,7 @@
 
-This repository contains the documentation for the datu core, a simple yet powerful framework for building and running AI agents. The documentation is built using [MkDocs](https://www.mkdocs.org/) and provides guides, examples, and API references.
+This repository contains the documentation for the datu core. The documentation is built using [MkDocs](https://www.mkdocs.org/) and provides guides, examples, and API references.
 
-The official documentation is available online at: 
+The official documentation is available online at: TODO
 
 ## Local Development
 
