@@ -7,7 +7,7 @@ After completing this guide you can deploy to production and running at scale.
 
 First, ensure that you have Python 3.11+ installed.
 
-We'll create a virtual environment to install the Strands Agents SDK and its dependencies in to.
+We'll create a virtual environment to install the Datu and its dependencies in to.
 
 ```bash
 python -m venv .venv

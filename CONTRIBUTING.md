@@ -35,7 +35,7 @@ Contributions via pull requests are much appreciated. Before sending us a pull r
 
 1. You are working against the latest source on the *main* branch.
 2. You check existing open, and recently merged, pull requests to make sure someone else hasn't addressed the problem already.
-3. You open an issue to discuss any significant work - we would hate for your time to be wasted.
+3. You open an issue to discuss any significant work -  we want to make sure your time is well spent. 
 
 To send us a pull request, please:
 
@@ -58,7 +58,11 @@ Looking at the existing issues is a great way to find something to contribute to
 
 
 ## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify datu.fi. Please do **not** create a public github issue.
+If you discover a potential security issue in this project, we ask that you notify [us](hello@datu.fi) . Please do **not** create a public github issue.
+
+## Slack Datu community
+
+The [slack](https://join.slack.com/t/datucommunity/shared_invite/zt-3b3yq8apy-wcJPH6jqJWp_LjqENFwKtA) community channel is your go-to place to connect with other users, ask questions, share tips, and stay up to date on the project. Whether you’re looking for help, want to see how others are using the tool, or just want to chat about ideas, Datu Community Slack is the place to go.  
 
 
 ## Licensing
