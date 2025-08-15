@@ -1,111 +1,254 @@
-:root > * {
-    --md-primary-fg-color: #14181C;
-    --md-primary-bg-color: #F0F6FC;
-    --md-primary-bg-color--light: #716F6F;
-    --md-accent-fg-color: #5E8BDE;
-    --md-typeset-a-color: #5E8BDE;
+/* Datu.fi Docs Custom Stylesheet
+   Palette:
+   Title color: #FF6729
+   Text color: #080808
+   Background 1: #FFFFFF
+   Background 2 (used for example in buttons): #0E253E
+       background-image: url('/assets/background2.jpg');
+*/
+body {
+    background-image: url('/assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.hide-title + h1 {
+    display: none;
+}
+/* Header customization to match datu.fi */
+.md-header {
+    background: #0E253E; /* Header background */
+    box-shadow: 0 2px 8px rgba(26,86,219,0.04); /* Header shadow */
+    min-height: 64px; /* Header height */
+}
+.md-header__button.md-logo img {
+    height: 48px; /* Logo height */
+    width: auto; /* Logo width auto */
+    margin-right: 1.5rem; /* Logo right margin */
+}
+.md-header__title {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif; /* Title font */
+    font-weight: 800; /* Title font weight */
+    color: #FF6729; /* Title color */
+    font-size: 1.3rem; /* Title font size */
+}
+.md-header__topic {
+    display: flex; /* Topic flex layout */
+    align-items: center; /* Topic vertical align */
 }
 
-[data-md-color-scheme="default"] .logo-light {
-    display: none !important;
+/* Book a Demo button in header */
+.md-header__option.datu-demo {
+    margin-left: 2rem; /* Demo button left margin */
 }
-[data-md-color-scheme="slate"] .logo-dark {
-    display: none !important;
+.datu-demo-btn {
+    background: #0E253E; /* Demo button background */
+    color: #fff !important; /* Demo button text color */
+    border: none; /* Demo button border */
+    border-radius: 2rem; /* Demo button border radius */
+    padding: 0.5em 1.5em; /* Demo button padding */
+    font-size: 1em; /* Demo button font size */
+    font-weight: 600; /* Demo button font weight */
+    text-decoration: none; /* Demo button text decoration */
+    transition: background 0.2s; /* Demo button transition */
+    margin-left: 1em; /* Demo button left margin */
+    display: inline-block; /* Demo button display */
+}
+.datu-demo-btn:hover {
+    background: #fff; /* Demo button hover background */
 }
 
-[data-md-color-scheme="default"] {
-    .md-header, .md-tabs {
-        background-color: #FFF;
-        color: var(--md-primary-fg-color);
+/* Responsive header logo and demo button */
+@media (max-width: 800px) {
+    .md-header__button.md-logo img {
+        height: 36px; /* Logo height mobile */
     }
-    .md-search__form, .md-search__input, .md-search__icon {
-        background-color: #F0F0F0;
-        color: var(--md-primary-fg-color);
-    }
-}
-
-.md-header__button.md-logo {
-    padding: 0 .2rem;
-    margin: 0;
-}
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg,
-.md-nav__title .md-nav__button.md-logo img,
-.md-nav__title .md-nav__button.md-logo svg {
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.md-tabs__link {
-    opacity: 1;
-    font-size: 1.6em;
-}
-
-.md-tabs__item--active,
-.md-tabs__item:hover,
-.md-content a:hover {
-    text-decoration: underline;
-    text-underline-offset: .5em;
-}
-.md-content a:hover {
-    text-underline-offset: .2em;
-}
-
-.md-nav--lifted > .md-nav__list > .md-nav__item > [for],
-.md-nav__item--section > .md-nav__link[for],
-.md-nav__title {
-    font-size: 1.4em;
-}
-
-.md-typeset h1 {
-    color: inherit;
-}
-
-.md-grid {
-    /* default was max-width: 61rem; */
-    max-width: 68rem;
-}
-
-.mermaid {
-    text-align: center;
-}
-
-/* Remove the font-enlargement that is on by default for the material theme */
-@media screen and (min-width: 100em) {
-    html {
-        font-size: 125%;
+    .md-header__option.datu-demo {
+        margin-left: 0.5rem; /* Demo button left margin mobile */
     }
 }
 
-@media screen and (min-width: 125em) {
-    html {
-        font-size: 125%;
-    }
+/* Datu Docs custom styles for Material theme */
+:root {
+    --md-primary-fg-color: #0E253E;   /* Title color */
+    --md-accent-fg-color: #FF6729;    /* Accent and button color */
+    --md-typeset-font-family: 'Inter', 'Segoe UI', Arial, sans-serif; /* Main font family */
+    --md-default-bg-color: #f6f6f600;   /* Main background */
+    --md-default-fg-color: #080808;   /* Main text color */
 }
 
-@media screen and (max-width: 76.2344em) {
-    .md-nav--lifted > .md-nav__list > .md-nav__item > [for],
-    .md-nav__item--section > .md-nav__link[for],
-    .md-nav__title {
-        font-size: 1em;
-    }
-    .md-nav--primary .md-nav__title {
-        height: auto;
-        padding: 2rem .8rem .2rem;
-    }
-    .md-nav--primary .md-nav__title .md-logo {
-        padding: .2rem;
-        margin: 0;
-    }
-
-    [data-md-color-scheme="default"] .md-nav--primary .md-nav__title,
-    [data-md-color-scheme="default"] .md-nav--primary .md-nav__title[for="__drawer"] {
-        background-color: #FFF;
-        color: var(--md-primary-fg-color);
-    }
+.md-main {
+    background: #14253c67; /* Main background */
+    padding: 2rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    margin-top: 0rem;
 }
 
-[data-md-color-scheme="slate"] {
-    /* Override the font color in dark mode - text is too light */
-    --md-default-fg-color: rgb(240, 246, 252)
+.md-content{
+    background: #ffffffa0;
+    padding: 2rem;
+}
+
+.md-main__inner {
+    background: #ffffffa0;
+    border-radius: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem
+
+}
+
+/* Hero section styles */
+.datu-hero {
+    display: flex; /* Hero flex layout */
+    flex-direction: column; /* Hero column direction */
+    align-items: center; /* Hero center align */
+    justify-content: center; /* Hero center justify */
+    padding: 3rem 1rem 2rem 1rem; /* Hero padding */
+    background: #ffffffbf; /* Hero background */
+    border-radius: 1.5rem; /* Hero border radius */
+    margin-bottom: 2rem; /* Hero bottom margin */
+}
+.datu-hero-title {
+    font-size: 2.5rem; /* Hero title font size */
+    font-weight: 800; /* Hero title font weight */
+    color: #FF6729; /* Hero title color */
+    margin-bottom: 0.5rem; /* Hero title bottom margin */
+}
+.datu-hero-subtitle {
+    font-size: 1.3rem; /* Hero subtitle font size */
+    color: #222; /* Hero subtitle color */
+    margin-bottom: 1.5rem; /* Hero subtitle bottom margin */
+    text-align: center; /* Center align subtitle text */
+}
+.datu-hero-btn {
+    background: #0E253E; /* Hero button background */
+    color: #fff !important; /* Hero button text color (forced white) */
+    border: none; /* Hero button border */
+    border-radius: 2rem; /* Hero button border radius */
+    padding: 0.8em 2em; /* Hero button padding */
+    font-size: 1.1em; /* Hero button font size */
+    font-weight: 600; /* Hero button font weight */
+    text-decoration: none; /* Hero button text decoration */
+    transition: background 0.2s; /* Hero button transition */
+    box-shadow: 0 2px 8px rgba(26,86,219,0.08); /* Hero button shadow */
+}
+.datu-hero-btn:hover {
+    background: #FF6729; /* Hero button hover background */
+    color: #fff !important; /* Hero button hover text color (forced white) */
+}
+
+/* Features grid styles */
+.datu-features {
+    display: flex; /* Features flex layout */
+    flex-wrap: wrap; /* Features wrap */
+    gap: 2rem; /* Features gap */
+    justify-content: center; /* Features center justify */
+    margin: 2rem 0; /* Features margin */
+}
+.datu-feature {
+    background: #ffffffbf; /* Feature background */
+    border-radius: 1rem; /* Feature border radius */
+    box-shadow: 0 2px 8px rgba(14,37,62,0.06); /* Feature shadow */
+    padding: 2rem 1.5rem; /* Feature padding */
+    max-width: 320px; /* Feature max width */
+    min-width: 220px; /* Feature min width */
+    flex: 1 1 220px; /* Feature flex */
+    text-align: center; /* Feature text align */
+}
+.datu-feature h3 {
+    color: #FF6729; /* Feature title color */
+    margin-bottom: 0.5rem; /* Feature title bottom margin */
+}
+.datu-feature p {
+    color: #080808; /* Feature text color */
+}
+
+/* Datu Docs custom styles for Material theme - Datu.fi palette */
+.md-header {
+    background: #ffffffa0; /* Header background (palette) */
+    box-shadow: 0 2px 8px rgba(14,37,62,0.04); /* Header shadow (palette) */
+    min-height: 64px; /* Header height (palette) */
+}
+.md-header__button.md-logo img {
+    height: 48px; /* Logo height (palette) */
+    width: auto; /* Logo width auto (palette) */
+    margin-right: 1.5rem; /* Logo right margin (palette) */
+    
+}
+.md-header__title {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif; /* Title font (palette) */
+    font-weight: 800; /* Title font weight (palette) */
+    color: #FF6729; /* Title color (palette) */
+    font-size: 1.3rem; /* Title font size (palette) */
+}
+.md-header__topic {
+    display: flex; /* Topic flex layout (palette) */
+    align-items: center; /* Topic vertical align (palette) */
+}
+.md-header__option.datu-demo {
+    margin-left: 2rem; /* Demo button left margin (palette) */
+}
+.datu-demo-btn {
+    background: #0E253E; /* Demo button background (palette) */
+    color: #fff !important; /* Demo button text color (palette) */
+    border: none; /* Demo button border (palette) */
+    border-radius: 2rem; /* Demo button border radius (palette) */
+    padding: 0.5em 1.5em; /* Demo button padding (palette) */
+    font-size: 1em; /* Demo button font size (palette) */
+    font-weight: 600; /* Demo button font weight (palette) */
+    text-decoration: none; /* Demo button text decoration (palette) */
+    transition: background 0.2s; /* Demo button transition (palette) */
+    margin-left: 1em; /* Demo button left margin (palette) */
+    display: inline-block; /* Demo button display (palette) */
+}
+.datu-demo-btn:hover {
+    background: #FF6729; /* Demo button hover background (palette) */
+    color: #fff !important; /* Demo button hover text color (palette) */
+}
+
+/* Call-to-action section styles */
+.datu-cta {
+    background: #0E253E; /* CTA background */
+    color: #fff; /* CTA text color */
+    border-radius: 1.5rem; /* CTA border radius */
+    padding: 2rem 1rem; /* CTA padding */
+    text-align: center; /* CTA text align */
+    margin: 2rem 0; /* CTA margin */
+}
+.datu-cta-btn {
+    background: #FF6729; /* CTA button background */
+    color: #fff; /* CTA button text color */
+    border: none; /* CTA button border */
+    border-radius: 2rem; /* CTA button border radius */
+    padding: 0.8em 2em; /* CTA button padding */
+    font-size: 1.1em; /* CTA button font size */
+    font-weight: 600; /* CTA button font weight */
+    text-decoration: none; /* CTA button text decoration */
+    margin-top: 1rem; /* CTA button top margin */
+    display: inline-block; /* CTA button display */
+    transition: background 0.2s; /* CTA button transition */
+}
+.datu-cta-btn:hover {
+    background: #FF6729; /* CTA button hover background */
+    color: #fff; /* CTA button hover text color */
+}
+
+
+/* Responsive tweaks for mobile */
+@media (max-width: 800px) {
+    .md-header__button.md-logo img {
+        height: 36px; /* Logo height mobile */
+    }
+    .md-header__option.datu-demo {
+        margin-left: 0.5rem; /* Demo button left margin mobile */
+    }
+    .datu-features {
+        flex-direction: column; /* Features column layout mobile */
+        align-items: center; /* Features center align mobile */
+    }
+    .datu-hero {
+        padding: 2rem 0.5rem 1.5rem 0.5rem; /* Hero padding mobile */
+    }
 }
