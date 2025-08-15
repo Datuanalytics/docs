@@ -1,5 +1,10 @@
 site_name: Datu AI Analyst
 site_description: Datu AI Analyst is a Python SDK for building AI agents that can interact with data, perform analysis, and generate insights. It provides a framework for creating agents that can work with various data sources and tools, enabling developers to build intelligent applications that leverage AI capabilities.
+site_name: Datu Docs
+site_url: https://docs.datu.fi/
+site_description: "Datu AI Analyst Documentation"
+site_author: "Datuanalytics"
+
 site_dir: site
 site_url: https://docs.datu.fi
 
@@ -7,21 +12,8 @@ repo_url: https://github.com/Datuanalytics/datu-core
 
 theme:
   name: material
-  palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      primary: custom
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      primary: custom
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  logo: assets/logo-light.svg
+  favicon: assets/favicon.ico
   features:
     - content.code.copy
     - content.code.select
@@ -34,7 +26,10 @@ theme:
     - navigation.top
     - search.highlight
     - content.code.copy
-
+  language: en
+  custom_dir: docs/stylesheets
+  icon:
+    repo: fontawesome/brands/github
 markdown_extensions:
   - admonition
   - codehilite
@@ -48,16 +43,14 @@ markdown_extensions:
           - name: mermaid
             class: mermaid
             format: !!python/name:pymdownx.superfences.fence_code_format
-  - toc:
-      title: On this page
-      permalink: true
 
 extra_css:
   - stylesheets/extra.css
 
 nav:
-  - User Guide:
-    - Welcome: README.md
+  - Home: index.md
+  - User Guide: 
+    - Welcome: user-guide/README.md
     - Quickstart: user-guide/quickstart.md
     - Datasources:
         - user-guide/datasources/datasources.md
@@ -107,6 +100,11 @@ extra:
   server_pypi: https://pypi.org/project/datu-core/
   server_repo: https://github.com/Datuanalytics/datu-core/blob/main
   server_repo_home: https://github.com/Datuanalytics/datu-core
+
+  # Custom header button (Book a Demo)
+  header:
+    - type: html
+      html: '<a href="mailto:info@datu.fi" class="datu-demo-btn">Book a Demo</a>'
 
 validation:
   nav:
