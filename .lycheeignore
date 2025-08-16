@@ -1,0 +1,6 @@
+# see examples in https://github.com/opensafely/documentation/blob/main/.lycheeignore
+
+# localhost
+https?://locahost.*
+https?://127\.0\.0\.1.*
+.*localhost.*
