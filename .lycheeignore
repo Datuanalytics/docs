@@ -4,3 +4,4 @@
 https?://locahost.*
 https?://127\.0\.0\.1.*
 .*localhost.*
+https://github.com/Datuanalytics/datu-core/issues*
