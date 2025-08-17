@@ -7,7 +7,7 @@ Use below recommended method to run Datu application as container service.
 To deploy your Datu, you need to containerize it using Podman or Docker. The Dockerfile defines how your application is packaged and run. Below is an example Docker file that installs all needed dependencies, the application, and configures the FastAPI server to run via unicorn dockerfile.
 
 ```sh
-FROM python:3.10-slim
+FROM python:3.11-slim
 SHELL ["/bin/bash", "-c"]
 
 RUN apt-get update && \
