@@ -48,7 +48,7 @@ extra_css:
 nav:
   - Home: index.md
   - User Guide: 
-    - Welcome: user-guide/README.md
+    - Welcome: README.md
     - Quickstart: user-guide/quickstart.md
     - Configurations: user-guide/configurations.md
     - Deploy:
