@@ -35,7 +35,7 @@ hide:
     }
   </style>
 <div class="datu-hero">
-  <img src="assets/logo-light.svg" alt="Datu Logo" width="90" style="margin-bottom:1.5rem;">
+  <img src="assets/datusignature.png" alt="Datu Logo" width="90" style="margin-bottom:1.5rem;">
   <div class="datu-hero-title">Datu AI Analyst</div>
   <div class="datu-hero-subtitle">Build intelligent, data-driven AI agents in just a few lines of code.</div>
   <a href="user-guide/quickstart/" class="datu-hero-btn">Get Started</a>
