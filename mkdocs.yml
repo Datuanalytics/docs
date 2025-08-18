@@ -10,7 +10,7 @@ repo_url: https://github.com/Datuanalytics/datu-core
 
 theme:
   name: material
-  logo: assets/logo-light.svg
+  logo: assets/datusignature.png
   favicon: assets/favicon.ico
   features:
     - content.code.copy
