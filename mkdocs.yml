@@ -4,12 +4,13 @@ site_url: https://docs.datu.fi/
 site_author: "Datuanalytics"
 
 site_dir: site
+site_url: https://docs.datu.fi
 
 repo_url: https://github.com/Datuanalytics/datu-core
 
 theme:
   name: material
-  logo: assets/logo-light.svg
+  logo: assets/datusignature.png
   favicon: assets/favicon.ico
   features:
     - content.code.copy
@@ -49,14 +50,17 @@ nav:
   - User Guide: 
     - Welcome: user-guide/README.md
     - Quickstart: user-guide/quickstart.md
-    - Configurations: user-guide/configurations.md
+    - Datasources:
+        - user-guide/datasources/datasources.md
+        - Postgres: user-guide/datasources/postgres.md
+        - Sqlserver: user-guide/datasources/sqlserver.md
+    - Configurations:
+        - user-guide/configurations.md
     - Deploy:
       - Container service: user-guide/deploy/deploy_as_container_service.md
     - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
   - Architecture:
     - Overview: architecture/README.md
-  - Examples:
-    - Overview: examples/README.md
   - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
 
 exclude_docs: |
@@ -83,8 +87,6 @@ plugins:
         User Guide:
           - README.md
           - user-guide/**/*.md
-        Examples:
-          - examples/**/*.md
 
 extra:
   social:

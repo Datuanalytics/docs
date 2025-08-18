@@ -1,0 +1,72 @@
+name: Documentation Update
+description: Suggest additions, modifications, or improvements to the documentation
+title: "[DOCS] "
+labels: ["docs", "enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve our documentation!
+  
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Type of Change
+      description: What kind of update are you suggesting?
+      options:
+        - Addition (new content)
+        - Modification (updates to existing content)
+        - Removal (outdated or redundant content)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-content
+    attributes:
+      label: Proposed Content / Change
+      description: Describe the content you'd like to add, modify, or remove
+      placeholder: I think the documentation should include/update/remove...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where should this content be placed or updated in the documentation structure?
+      placeholder: This should be added/updated in the section on...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this change valuable for the project documentation?
+      placeholder: This content change would be valuable because...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: content-outline
+    attributes:
+      label: Suggested Outline (Optional)
+      description: If you have ideas for how the content should be structured, provide an outline
+      placeholder: |
+        1. Introduction
+        2. Key concepts
+        3. Examples
+    validations:
+      required: false
+      
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Include links to any reference material or examples
+      placeholder: Related resources or examples
+    validations:
+      required: false
