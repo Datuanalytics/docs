@@ -23,7 +23,7 @@ reported the issue. Please try to include as much information as you can. Detail
 Looking at the existing issues is a great way to find something to contribute to. We label issues that are well-defined and ready for community contributions with the "ready for contribution" label.
 
 Check our "Ready for Contribution" issues for items you can work on:
-- [SDK Python Issues](https://github.com/Datuanalytics/datu-core/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22ready%20for%20contribution%22)
+- [Datu Core Issues](https://github.com/Datuanalytics/datu-core/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22ready%20for%20contribution%22)
 
 Before starting work on any issue:
 1. Check if someone is already assigned or working on it

@@ -21,7 +21,7 @@ Then follow next steps.
 Ready to learn more? Check out these resources:
 
 - [Quickstart](user-guide/quickstart.md) - A more detailed introduction to Datu core
-- [Examples](examples/README.md) - Examples for connecting multiple datasources.
+- [Datasources](user-guide/datasources/datasources.md) - Connecting multiple datasources.
 
 [Learn how to contribute]({{ server_repo }}/CONTRIBUTING.md) or join our community discussions to shape the future of Datu ❤️.
 

@@ -59,7 +59,14 @@ my_sources:
 
 After creating the datasources profiles.yml.
 
-**Environment variables**: Set `DATU_OPENAI_API_KEY`
+### 🔧 Environment Variables  
+
+set the following environment variables:  
+
+- **`DATU_OPENAI_API_KEY`** – your OpenAI API key  
+- **`DATU_DBT_PROFILES`** – path to your `profiles.yml` 
+
+Then run
 
 ```bash
 datu
@@ -75,5 +82,5 @@ To enable debug logs in Datu server .
 
 Ready to learn more? Check out these resources:
 
-- [Examples](../examples/README.md) - Examples for connecting multiple datasources.
+- [Datasources](datasources/datasources.md) - Connecting multiple datasources.
 - [More configurations](configurations.md) - Datu server configurations includes port, schema configurations etc.
