@@ -64,5 +64,5 @@ hide:
   <div>Ready to get started?</div>
   <div style="margin:1rem 0 0.5rem 0;">Check out the quickstart guide or book a demo with our team.</div>
   <a href="user-guide/quickstart/" class="datu-cta-btn">Quickstart Guide</a>
-  <a href="mailto:info@datu.fi" class="datu-cta-btn">Book a Demo</a>
+  <a href="hello@datu.fi" class="datu-cta-btn">Book a Demo</a>
 </div>
