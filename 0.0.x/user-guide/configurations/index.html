@@ -804,6 +804,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mcp-related-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP related configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP related configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-mcp-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable MCP Connectivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-servers-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP Servers Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -885,6 +918,83 @@
   
   <span class="md-ellipsis">
     Container service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    MCP Connectivity
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            MCP Connectivity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP Connectivity/mcp_connectivity.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
     
   </span>
   
@@ -1203,6 +1313,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mcp-related-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP related configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP related configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-mcp-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable MCP Connectivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-servers-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP Servers Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1273,6 +1416,23 @@
 <h5 id="dbt-profiles">DBT profiles</h5>
 <p>Datasource profiles.yml.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">DATU_DBT_PROFILES</span><span class="o">=</span>
+</code></pre></div>
+<h4 id="mcp-related-configuration">MCP related configuration</h4>
+<h5 id="enable-mcp-connectivity">Enable MCP Connectivity</h5>
+<p>Set the following environment variable to enable MCP connectivity in Datu:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">DATU_ENABLE_MCP</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<h5 id="mcp-servers-configuration">MCP Servers Configuration</h5>
+<p>Define your MCP servers in a JSON config file (e.g. mcp_config.json):</p>
+<div class="highlight"><pre><span></span><code><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;mcpServers&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;sql_generator&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;command&quot;</span>:<span class="w"> </span><span class="s2">&quot;python&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;args&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;-m&quot;</span>,<span class="w"> </span><span class="s2">&quot;datu.mcp.tools.sql_generator&quot;</span><span class="o">]</span>,
+<span class="w">      </span><span class="s2">&quot;env&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;PYTHONPATH&quot;</span>:<span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div>
 
 
