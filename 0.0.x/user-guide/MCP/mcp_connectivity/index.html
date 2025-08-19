@@ -12,13 +12,13 @@
         <meta name="author" content="Datuanalytics">
       
       
-        <link rel="canonical" href="https://docs.datu.fi/latest/user-guide/datasources/sqlserver/">
+        <link rel="canonical" href="https://docs.datu.fi/latest/user-guide/MCP/mcp_connectivity/">
       
       
-        <link rel="prev" href="../postgres/">
+        <link rel="prev" href="../../deploy/deploy_as_container_service/">
       
       
-        <link rel="next" href="../../configurations/">
+        <link rel="next" href="../../../architecture/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Sqlserver - Datu AI Analyst</title>
+        <title>MCP Connectivity Overview - Datu AI Analyst</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sqlserver-as-a-datasource" class="md-skip">
+        <a href="#mcp-connectivity-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sqlserver
+              MCP Connectivity Overview
             
           </span>
         </div>
@@ -434,8 +434,6 @@
                 
   
   
-    
-  
   
   
     
@@ -451,11 +449,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
@@ -471,7 +469,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Datasources
@@ -485,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datasources/" class="md-nav__link">
+      <a href="../../datasources/datasources/" class="md-nav__link">
         
   
   
@@ -508,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgres/" class="md-nav__link">
+      <a href="../../datasources/postgres/" class="md-nav__link">
         
   
   
@@ -528,30 +526,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Sqlserver
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../datasources/sqlserver/" class="md-nav__link">
         
   
   
@@ -562,33 +540,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sqlserver-as-a-datasource" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sqlserver as a datasource
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -760,6 +711,8 @@
                 
   
   
+    
+  
   
   
     
@@ -775,11 +728,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
@@ -795,7 +748,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             MCP
@@ -806,10 +759,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../MCP/mcp_connectivity/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    MCP Connectivity Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -820,6 +795,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling MCP Servers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling MCP Servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting MCP Servers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -952,6 +980,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -960,11 +990,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sqlserver-as-a-datasource" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Sqlserver as a datasource
+      Purpose
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling MCP Servers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling MCP Servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting MCP Servers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -987,24 +1041,31 @@
   
 
 
-  <h1>Sqlserver</h1>
-
-<h3 id="sqlserver-as-a-datasource">Sqlserver as a datasource</h3>
-<p>Install datucore with extras postgres</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;datu-core[sqldb]&quot;</span>
+<h1 id="mcp-connectivity-overview">MCP Connectivity Overview</h1>
+<p>This directory provides examples and configuration files to help you connect MCP servers with Datu.<br />
+Datu uses the <a href="https://github.com/mcp-use/mcp-use">mcp-use</a> package to implement MCP clients and manage connectivity.</p>
+<h2 id="purpose">Purpose</h2>
+<p>With Datu, you can connect to your MCP servers and use their tools through the Datu AI Analyst.</p>
+<h2 id="enabling-mcp-servers">Enabling MCP Servers</h2>
+<p>To enable MCP connectivity, set the following environment variable (see also <a href="../../configurations/">configurations.md</a>):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">DATU_ENABLE_MCP</span><span class="o">=</span><span class="nb">true</span>
 </code></pre></div>
-<p>For sqlserver to work you have to make sure the below ODBC driver is installed on your machine according to the Operating System.</p>
-<p><a href="https://learn.microsoft.com/en-us/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development?view=sql-server-ver16&amp;tabs=windows">Install ODBC driver</a></p>
-<p>In profiles.yml</p>
-<div class="highlight"><pre><span></span><code>dev-sqlserver:
-<span class="w">    </span>type:<span class="w"> </span>sqlserver
-<span class="w">    </span>driver:<span class="w"> </span><span class="s1">&#39;ODBC Driver 18 for SQL Server&#39;</span><span class="w"> </span><span class="c1"># Mandatory for sqlserver.</span>
-<span class="w">    </span>host:<span class="w"> </span><span class="o">[</span>hostname<span class="o">]</span>
-<span class="w">    </span>user:<span class="w"> </span><span class="o">[</span>username<span class="o">]</span>
-<span class="w">    </span>password:<span class="w"> </span><span class="o">[</span>password<span class="o">]</span>
-<span class="w">    </span>port:<span class="w"> </span><span class="o">[</span>port<span class="o">]</span>
-<span class="w">    </span>dbname:<span class="w"> </span><span class="o">[</span>database<span class="w"> </span>name<span class="o">]</span>
-<span class="w">    </span>schema:<span class="w"> </span><span class="o">[</span>schema<span class="o">]</span>
+<p>Alternatively, add it to your .env file:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">DATU_ENABLE_MCP</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<h3 id="connecting-mcp-servers">Connecting MCP Servers</h3>
+<p>MCP servers are defined in a JSON configuration file (e.g. mcp_config.json).
+Each server entry specifies the command, arguments, and environment needed to start it.</p>
+<p><strong>Structure of mcp_config.json</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;mcpServers&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;sql_generator&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;command&quot;</span>:<span class="w"> </span><span class="s2">&quot;python&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;args&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;-m&quot;</span>,<span class="w"> </span><span class="s2">&quot;datu.mcp.tools.sql_generator&quot;</span><span class="o">]</span>,
+<span class="w">      </span><span class="s2">&quot;env&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;PYTHONPATH&quot;</span>:<span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div>
 
 

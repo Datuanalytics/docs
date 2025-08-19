@@ -4,6 +4,7 @@
 
 ## User Guide
 
+- [MCP Connectivity Overview](https://docs.datu.fi/latest/user-guide/MCP/mcp_connectivity/index.md)
 - [Datasources Overview](https://docs.datu.fi/latest/user-guide/datasources/datasources/index.md)
 - [Postgres](https://docs.datu.fi/latest/user-guide/datasources/postgres/index.md)
 - [Sqlserver](https://docs.datu.fi/latest/user-guide/datasources/sqlserver/index.md)
