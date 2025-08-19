@@ -31,4 +31,4 @@ jobs:
           pip install -r requirements.txt
       - run: |
           mike deploy --push --update-aliases 0.0.x latest
-          mike set-default --push 0.0.x
+          mike set-default --push latest
