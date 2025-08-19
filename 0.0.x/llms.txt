@@ -4,7 +4,6 @@
 
 ## User Guide
 
-- [Welcome](https://docs.datu.fi/latest/index.md)
 - [Datasources Overview](https://docs.datu.fi/latest/user-guide/datasources/datasources/index.md)
 - [Postgres](https://docs.datu.fi/latest/user-guide/datasources/postgres/index.md)
 - [Sqlserver](https://docs.datu.fi/latest/user-guide/datasources/sqlserver/index.md)
