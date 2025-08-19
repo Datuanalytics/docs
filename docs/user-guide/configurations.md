@@ -88,4 +88,28 @@ Datasource profiles.yml.
 DATU_DBT_PROFILES=
 ```
 
+#### MCP related configuration
+
+##### Enable MCP Connectivity
+
+Set the following environment variable to enable MCP connectivity in Datu:
+
+```sh
+DATU_ENABLE_MCP=true
+```
+
+##### MCP Servers Configuration
+Define your MCP servers in a JSON config file (e.g. mcp_config.json):
+
+```sh
+{
+  "mcpServers": {
+    "sql_generator": {
+      "command": "python",
+      "args": ["-m", "datu.mcp.tools.sql_generator"],
+      "env": { "PYTHONPATH": "." }
+    }
+  }
+}
+```
 
