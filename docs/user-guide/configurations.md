@@ -101,7 +101,7 @@ DATU_ENABLE_MCP=true
 ##### MCP Servers Configuration
 Define your MCP servers in a JSON config file (e.g. mcp_config.json):
 
-```sh
+```json
 {
   "mcpServers": {
     "sql_generator": {
@@ -113,3 +113,12 @@ Define your MCP servers in a JSON config file (e.g. mcp_config.json):
 }
 ```
 
+#### Telemetry related configuration
+
+##### Product telemetry
+
+Product telemetry is enabled by default and you can disable it by
+
+```sh
+DATU_ENABLE_ANONYMIZED_TELEMETRY=false
+```

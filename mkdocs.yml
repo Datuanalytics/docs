@@ -57,7 +57,9 @@ nav:
     - Deploy:
       - Container service: user-guide/deploy/deploy_as_container_service.md
     - MCP:
-        - user-guide/MCP/mcp_connectivity.md
+        - user-guide/mcp/mcp_connectivity.md
+    - Telemetry:
+        - user-guide/telemetry/product.md
   - Architecture:
     - Overview: architecture/README.md
   - Contribute ❤️: https://github.com/Datuanalytics/datu-core/blob/main/CONTRIBUTING.md
