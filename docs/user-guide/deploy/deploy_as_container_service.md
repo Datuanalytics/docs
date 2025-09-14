@@ -6,7 +6,7 @@ Use below recommended method to run Datu application as container service.
 
 To deploy your Datu, you need to containerize it using Podman or Docker. The Dockerfile defines how your application is packaged and run. Below is an example Docker file that installs all needed dependencies, the application, and configures the FastAPI server to run via unicorn dockerfile.
 
-```sh
+```dockerfile
 FROM python:3.11-slim
 SHELL ["/bin/bash", "-c"]
 
@@ -18,15 +18,15 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     pip install --upgrade pip
 
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-RUN curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg \
+&& curl https://packages.microsoft.com/config/debian/11/prod.list -o /etc/apt/sources.list.d/mssql-release.list
 
 RUN apt-get update
 RUN env ACCEPT_EULA=Y apt-get install -y msodbcsql18
 WORKDIR /app
+COPY . .
 RUN pip install "datu-core[postgres,sqldb]"
-ENTRYPOINT [] 
-CMD ["uvicorn", "datu.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["datu"]
 ```
 
 ## Infrastructure
