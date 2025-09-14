@@ -18,11 +18,11 @@
         <link rel="prev" href="../../configurations/">
       
       
-        <link rel="next" href="../../MCP/mcp_connectivity/">
+        <link rel="next" href="../../telemetry/product/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -822,12 +822,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MCP/mcp_connectivity/" class="md-nav__link">
+      <a href="../../mcp/mcp_connectivity.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    MCP Connectivity Overview
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Telemetry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Telemetry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telemetry/product/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Telemetry in Datu Server
     
   </span>
   
@@ -1015,10 +1092,10 @@
 <p>Use below recommended method to run Datu application as container service.</p>
 <h2 id="containerization">Containerization</h2>
 <p>To deploy your Datu, you need to containerize it using Podman or Docker. The Dockerfile defines how your application is packaged and run. Below is an example Docker file that installs all needed dependencies, the application, and configures the FastAPI server to run via unicorn dockerfile.</p>
-<div class="highlight"><pre><span></span><code>FROM<span class="w"> </span>python:3.11-slim
-SHELL<span class="w"> </span><span class="o">[</span><span class="s2">&quot;/bin/bash&quot;</span>,<span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+<span class="k">SHELL</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/bin/bash&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">]</span>
 
-RUN<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>build-essential<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>curl<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>apt-utils<span class="w"> </span><span class="se">\</span>
@@ -1026,15 +1103,15 @@ RUN<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w">
 <span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 
-RUN<span class="w"> </span>curl<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
-RUN<span class="w"> </span>curl<span class="w"> </span>https://packages.microsoft.com/config/debian/11/prod.list<span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/mssql-release.list
+<span class="k">RUN</span><span class="w"> </span>curl<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/trusted.gpg.d/microsoft.gpg<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>https://packages.microsoft.com/config/debian/11/prod.list<span class="w"> </span>-o<span class="w"> </span>/etc/apt/sources.list.d/mssql-release.list
 
-RUN<span class="w"> </span>apt-get<span class="w"> </span>update
-RUN<span class="w"> </span>env<span class="w"> </span><span class="nv">ACCEPT_EULA</span><span class="o">=</span>Y<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>msodbcsql18
-WORKDIR<span class="w"> </span>/app
-RUN<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;datu-core[postgres,sqldb]&quot;</span>
-ENTRYPOINT<span class="w"> </span><span class="o">[]</span><span class="w"> </span>
-CMD<span class="w"> </span><span class="o">[</span><span class="s2">&quot;uvicorn&quot;</span>,<span class="w"> </span><span class="s2">&quot;datu.main:app&quot;</span>,<span class="w"> </span><span class="s2">&quot;--host&quot;</span>,<span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span>,<span class="w"> </span><span class="s2">&quot;--port&quot;</span>,<span class="w"> </span><span class="s2">&quot;8000&quot;</span>,<span class="w"> </span><span class="s2">&quot;--reload&quot;</span><span class="o">]</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="k">RUN</span><span class="w"> </span><span class="k">env</span><span class="w"> </span><span class="nv">ACCEPT_EULA</span><span class="o">=</span>Y<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>msodbcsql18
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;datu-core[postgres,sqldb]&quot;</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;datu&quot;</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="infrastructure">Infrastructure</h2>
 <p>For running Datu application smoothly, make sure you are allocated about 1GB of CPU and 2GB of memory atleast.For configurable variables checkout the quickstart/configurations section.</p>
@@ -1080,7 +1157,8 @@ CMD<span class="w"> </span><span class="o">[</span><span class="s2">&quot;uvicor
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     

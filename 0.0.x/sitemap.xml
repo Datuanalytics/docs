@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.datu.fi/latest/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/architecture/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/configurations/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/quickstart/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/MCP/mcp_connectivity/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/datasources/datasources/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/datasources/postgres/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/datasources/sqlserver/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
     </url>
     <url>
          <loc>https://docs.datu.fi/latest/user-guide/deploy/deploy_as_container_service/</loc>
-         <lastmod>2025-08-19</lastmod>
+         <lastmod>2025-09-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.datu.fi/latest/user-guide/telemetry/product/</loc>
+         <lastmod>2025-09-14</lastmod>
     </url>
 </urlset>

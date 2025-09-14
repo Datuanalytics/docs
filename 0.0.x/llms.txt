@@ -9,4 +9,5 @@
 - [Postgres](https://docs.datu.fi/latest/user-guide/datasources/postgres/index.md)
 - [Sqlserver](https://docs.datu.fi/latest/user-guide/datasources/sqlserver/index.md)
 - [Container service](https://docs.datu.fi/latest/user-guide/deploy/deploy_as_container_service/index.md)
+- [Telemetry in Datu Server](https://docs.datu.fi/latest/user-guide/telemetry/product/index.md)
 

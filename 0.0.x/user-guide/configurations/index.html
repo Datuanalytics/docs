@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -837,6 +837,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#telemetry-related-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetry related configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Telemetry related configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product telemetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -989,12 +1013,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../MCP/mcp_connectivity/" class="md-nav__link">
+      <a href="../mcp/mcp_connectivity.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    MCP Connectivity Overview
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Telemetry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Telemetry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../telemetry/product/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Telemetry in Datu Server
     
   </span>
   
@@ -1323,6 +1424,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#telemetry-related-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetry related configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Telemetry related configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product telemetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1401,15 +1526,20 @@
 </code></pre></div>
 <h5 id="mcp-servers-configuration">MCP Servers Configuration</h5>
 <p>Define your MCP servers in a JSON config file (e.g. mcp_config.json):</p>
-<div class="highlight"><pre><span></span><code><span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;mcpServers&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;sql_generator&quot;</span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">      </span><span class="s2">&quot;command&quot;</span>:<span class="w"> </span><span class="s2">&quot;python&quot;</span>,
-<span class="w">      </span><span class="s2">&quot;args&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;-m&quot;</span>,<span class="w"> </span><span class="s2">&quot;datu.mcp.tools.sql_generator&quot;</span><span class="o">]</span>,
-<span class="w">      </span><span class="s2">&quot;env&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;PYTHONPATH&quot;</span>:<span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">}</span>
-<span class="w">    </span><span class="o">}</span>
-<span class="w">  </span><span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;sql_generator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-m&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;datu.mcp.tools.sql_generator&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;PYTHONPATH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="telemetry-related-configuration">Telemetry related configuration</h4>
+<h5 id="product-telemetry">Product telemetry</h5>
+<p>Product telemetry is enabled by default and you can disable it by</p>
+<div class="highlight"><pre><span></span><code><span class="nv">DATU_ENABLE_ANONYMIZED_TELEMETRY</span><span class="o">=</span><span class="nb">false</span>
 </code></pre></div>
 
 
@@ -1453,7 +1583,8 @@
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
